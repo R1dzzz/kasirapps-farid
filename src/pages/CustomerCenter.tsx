@@ -13,8 +13,8 @@ export default function CustomerCenter() {
   ];
 
   const contactMethods = [
-    { icon: Phone, label: '+62 823-3104-0487', desc: language === 'id' ? 'Senin - Jumat, 09:00 - 18:00' : 'Mon - Fri, 09:00 - 18:00' },
-    { icon: Mail, label: 'gorid772@gmail.com', desc: language === 'id' ? 'Respons dalam 24 jam' : 'Response within 24 hours' },
+    { icon: Phone, label: '+62 812-3456-7890', desc: language === 'id' ? 'Senin - Jumat, 09:00 - 18:00' : 'Mon - Fri, 09:00 - 18:00' },
+    { icon: Mail, label: 'support@kasirapps.com', desc: language === 'id' ? 'Respons dalam 24 jam' : 'Response within 24 hours' },
     { icon: MessageSquare, label: language === 'id' ? 'Live Chat' : 'Live Chat', desc: language === 'id' ? 'Senin - Minggu, 09:00 - 21:00' : 'Mon - Sun, 09:00 - 21:00' },
     { icon: Clock, label: language === 'id' ? 'Jam Layanan' : 'Service Hours', desc: language === 'id' ? '09:00 - 21:00 WIB setiap hari' : '09:00 - 21:00 WIB daily' },
   ];
