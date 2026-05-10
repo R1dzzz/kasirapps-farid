@@ -125,9 +125,12 @@ export function Navbar() {
                   to="/dashboard"
                   className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-muted transition-colors"
                 >
-                  <div className="h-7 w-7 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-primary-foreground">
+                  <div className="h-7 w-7 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-primary-foreground shrink-0">
                     {user?.name?.[0]?.toUpperCase() || 'U'}
                   </div>
+                  <span className="text-sm font-medium text-foreground max-w-[120px] truncate">
+                    {user?.name || user?.email}
+                  </span>
                 </Link>
               </div>
             ) : (
