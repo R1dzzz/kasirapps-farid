@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, Github, MessageCircle } from "lucide-react";
+import { Grid3X3, Mail, Phone, Instagram, Twitter, Facebook } from 'lucide-react';
 import { useStore } from '@/stores/useStore';
 
 export function Footer() {
@@ -76,68 +76,29 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}<div>
-  <h3 className="text-sm font-semibold text-foreground mb-4">{t('contact')}</h3>
-
-  <ul className="space-y-2.5">
-    <li className="flex items-center gap-2 text-sm text-muted-foreground">
-      <Mail className="h-4 w-4" />
-      <a
-        href="mailto:gorid772@gmail.com"
-        className="hover:text-foreground transition-colors"
-      >
-        gorid772@gmail.com
-      </a>
-    </li>
-
-    <li className="flex items-center gap-2 text-sm text-muted-foreground">
-      <Phone className="h-4 w-4" />
-      <a
-        href="tel:+6282331040487"
-        className="hover:text-foreground transition-colors"
-      >
-        +62 823-3104-0487
-      </a>
-    </li>
-  </ul>
-
-  <div className="flex items-center gap-3 mt-4">
-    <a
-      href="https://github.com/R1dzzz"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors text-muted-foreground hover:text-foreground"
-      aria-label="GitHub"
-    >
-      <Github className="h-4 w-4" />
-    </a>
-
-    <a
-      href="https://x.com/Blitch03"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors text-muted-foreground hover:text-foreground"
-      aria-label="X"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="h-4 w-4"
-      >
-        <path d="M18.244 2H21.5l-7.12 8.136L22 22h-5.956l-4.664-6.104L5.98 22H2.72l7.62-8.707L2 2h6.106l4.216 5.54L18.244 2zm-1.044 18h1.802L7.05 3.894H5.144L17.2 20z" />
-      </svg>
-    </a>
-
-    <a
-      href="https://wa.me/6282331040487?text=Halo%20Farid,%20saya%20tertarik%20dengan%20KasirApps."
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors text-muted-foreground hover:text-foreground"
-      aria-label="WhatsApp"
-    >
-                  <MessageCircle className="h-4 w-4" />
-                </a>
+          {/* Contact */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-4">{t('contact')}</h3>
+            <ul className="space-y-2.5">
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                support@kasirapps.com
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                +62 812-3456-7890
+              </li>
+            </ul>
+            <div className="flex items-center gap-3 mt-4">
+              <a href="#" className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors text-muted-foreground hover:text-foreground">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="#" className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors text-muted-foreground hover:text-foreground">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="#" className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors text-muted-foreground hover:text-foreground">
+                <Facebook className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
