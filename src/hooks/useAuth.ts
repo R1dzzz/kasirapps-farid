@@ -28,7 +28,7 @@ export function useAuth() {
       setLoading(false);
     });
 
-    // Listen for auth changes
+    // Listen for auth changes (handles OAuth redirect restore too)
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session?.user) {
         setUser({
@@ -75,11 +75,23 @@ export function useAuth() {
     return false;
   }, [showToast, language]);
 
+  const loginWithGoogle = useCallback(async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: window.location.origin,
+      },
+    });
+    if (error) {
+      showToast(error.message, 'error');
+    }
+  }, [showToast]);
+
   const logout = useCallback(async () => {
     await supabase.auth.signOut();
     setUser(null);
     showToast(language === 'id' ? 'Berhasil keluar' : 'Logged out successfully');
   }, [showToast, language]);
 
-  return { user, loading, isLoggedIn, login, register, logout };
+  return { user, loading, isLoggedIn, login, register, loginWithGoogle, logout };
 }
