@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Toast } from '@/components/Toast';
@@ -52,6 +52,8 @@ function App() {
           <Route path="/warranty" element={<Warranty />} />
           <Route path="/returns" element={<Returns />} />
           <Route path="/customer-center" element={<CustomerCenter />} />
+          {/* OAuth redirect handler — Supabase fires onAuthStateChange, then we push to dashboard */}
+          <Route path="/auth/callback" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </main>
       <Footer />
